@@ -9,7 +9,8 @@ const store = RootModel.create({
     },
     bookingDashboard: {
         status: "pending"
-    }
+    },
+    totalHoursGoal: 1000
 });
 
 // MobX spy goes here

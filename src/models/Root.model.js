@@ -6,7 +6,8 @@ import EmployeeListModel from "models/employee/EmployeeList.model";
 
 const RootModel = {
     employee: EmployeeListModel,
-    bookingDashboard: BookingDashboardModel
+    bookingDashboard: BookingDashboardModel,
+    totalHoursGoal: types.number
 };
 
 

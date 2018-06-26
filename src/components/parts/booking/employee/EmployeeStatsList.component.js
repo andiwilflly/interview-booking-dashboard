@@ -1,37 +1,25 @@
 import React from 'react';
-import store from "store";
+import PropTypes from 'prop-types';
 // MobX
-import { values } from "mobx";
 import { observer } from "mobx-react";
 // Styles
 import styles from "./EmployeeStatsList.module.scss";
+// Components
+import EmployeeStatsItem from "components/parts/booking/employee/EmployeeStatsItem.component"
 
 
 class EmployeeStatsList extends React.Component {
 
-    componentDidMount() {
-        store.employee.fetchBookings();
-    }
-
-
-    get employeeList() { return values(store.employee.all); }
+   static propTypes = {
+       employeeList: PropTypes.array.isRequired
+   };
 
 
     render() {
-        if(store.employee.status !== 'fulfilled') return <div>Loading...</div>;
-
         return (
-            <ul>
-                { this.employeeList.map((employee)=> {
-                    console.log(employee);
-                    return (
-                        <li key={employee.lastName}>
-                            <img src={ employee.profileImageUrl }
-                                 alt={`${employee.firstName} ${employee.lastName}`} />
-
-                            <p>{ employee.lastName } { employee.lastName.charAt(0) }.</p>
-                        </li>
-                    )
+            <ul className={ styles.employeeStatsList }>
+                { this.props.employeeList.map((employee)=> {
+                    return <EmployeeStatsItem employee={ employee } key={employee.lastName}/>
                 })}
             </ul>
         );

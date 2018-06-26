@@ -10,11 +10,23 @@ import EmployeeStatsList from "components/parts/booking/employee/EmployeeStatsLi
 
 class EmployeeStatsItem extends React.Component {
 
+    componentDidMount() {
+        store.employee.fetchBookings();
+    }
+
+
+    get employeeList() { return store.employee.sortedEmployees.slice(0, 3); };
+
+
     render() {
         return (
             <div>
                 <h3>Employee Stats</h3>
-                <EmployeeStatsList />
+                { store.employee.status === 'fulfilled' ?
+                    <EmployeeStatsList employeeList={ this.employeeList } />
+                    :
+                    <p>Loading...</p>
+                }
             </div>
         );
     }

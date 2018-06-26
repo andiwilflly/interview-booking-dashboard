@@ -1,7 +1,7 @@
 import env from "env";
 import moment from "moment";
 // MobX
-import { runInAction } from "mobx";
+import { runInAction, values } from "mobx";
 import { types } from 'mobx-state-tree';
 // Models
 import EmployeeModel from "models/employee/Employee.model";
@@ -68,4 +68,11 @@ const actions = (self)=> {
 };
 
 
-export default types.model('Bookings', Bookings).actions(actions);
+const views = (self)=> {
+    return {
+        get sortedEmployees() { return values(self.all).sort((prev, next)=> prev.bookingHours < next.bookingHours) }
+    }
+};
+
+
+export default types.model('Bookings', Bookings).actions(actions).views(views);
