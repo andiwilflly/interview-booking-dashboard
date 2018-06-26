@@ -1,4 +1,41 @@
 @import '../../../../styles/vars';
 
 .employeeStatsItem :global {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: $employee-stats-item-height;
+    margin: $employee-stats-item-margin;
+}
+
+
+.employeeStatsItemImageWrapper :global {
+    width: $employee-stats-item-height;
+    height: $employee-stats-item-height;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+.employeeStatsItemInfo :global {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: $employee-stats-item-info-with;
+}
+
+
+.employeeStatsItemInfoName :global {
+    color: $color-white;
+    line-height: 18px;
+}
+
+.employeeStatsItemInfoHours :global {
+    line-height: 18px;
 }

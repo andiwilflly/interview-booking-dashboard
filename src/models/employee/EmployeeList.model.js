@@ -36,8 +36,8 @@ const actions = (self)=> {
 
             bookings.forEach((booking)=> {
                 if(!booking.employee) return;
-                const checkInDate =  moment(booking.checkInDate, 'DD:MM:YYYY').toDate().valueOf();
-                const checkOutDate =  moment(booking.checkOutDate, 'DD:MM:YYYY').toDate().valueOf();
+                const checkInDate = moment(booking.checkInDate, 'DD:MM:YYYY').toDate().valueOf();
+                const checkOutDate = moment(booking.checkOutDate, 'DD:MM:YYYY').toDate().valueOf();
                 const bookingHours = (checkOutDate - checkInDate) / 1000 / 60 / 60;
 
                 employeeList[booking.employee.lastName] = {

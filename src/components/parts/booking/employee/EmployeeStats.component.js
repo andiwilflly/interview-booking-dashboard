@@ -20,8 +20,8 @@ class EmployeeStatsItem extends React.Component {
 
     render() {
         return (
-            <div>
-                <h3>Employee Stats</h3>
+            <div className={ styles.employeeStats }>
+                <h3 className={ styles.employeeStatsTitle }>Employee stats</h3>
                 { store.employee.status === 'fulfilled' ?
                     <EmployeeStatsList employeeList={ this.employeeList } />
                     :

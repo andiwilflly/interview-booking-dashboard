@@ -1,5 +1,21 @@
 @import '../../../styles/vars';
 
-.booking-dashboard :global {
-    background: darkred;
+.bookingDashboard :global {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 31px;
+    border-bottom: 1px solid $color-arsenic;
+    margin-bottom: 65px;
+}
+
+.bookingDashboardItem :global {
+    width: $booking-dashboard-item-width;
+    padding-left: 5px;
+}
+
+.bookingDashboardItemNumber :global {
+    font-size: 24px;
+    color: $color-white;
+    height: 29px;
 }

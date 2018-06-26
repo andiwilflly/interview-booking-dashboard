@@ -1,4 +1,6 @@
 @import '../../../../styles/vars';
 
 .employeeStatsList :global {
+    margin-left: 40px;
+    width: $employee-stats-item-with;
 }
