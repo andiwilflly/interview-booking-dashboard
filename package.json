@@ -9,6 +9,7 @@
         "mobx": "^4.2.1",
         "mobx-react": "^5.1.2",
         "mobx-state-tree": "^2.0.5",
+        "moment": "^2.22.2",
         "react": "^16.1.1",
         "react-dom": "^16.1.1",
         "react-router-dom": "^4.3.1"

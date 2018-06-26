@@ -1,18 +1,17 @@
 import React from 'react';
-import store from "store";
+// Components
+import BookingDashboard from "components/parts/booking/BookingDashboard.component";
+import EmployeeStats from "components/parts/booking/employee/EmployeeStats.component";
 
 
 class BookingPage extends React.Component {
 
-    componentDidMount() {
-        store.bookingSnapshot.fetch();
-        store.bookings.fetch();
-    }
-
-
     render() {
         return (
-            <div>Booking</div>
+            <div>
+                <BookingDashboard />
+                <EmployeeStats />
+            </div>
         );
     }
 }

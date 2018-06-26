@@ -4,12 +4,11 @@ import RootModel from "models/Root.model";
 
 
 const store = RootModel.create({
-    bookings: {},
-    bookingSnapshot: {
-        availableRooms: 0,
-        reservedRooms: 0,
-        checkedIn: 0,
-        weekAvailabilityPercent: 0
+    employee: {
+        status: "pending"
+    },
+    bookingDashboard: {
+        status: "pending"
     }
 });
 
