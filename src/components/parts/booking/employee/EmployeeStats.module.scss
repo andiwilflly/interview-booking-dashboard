@@ -1,11 +1,7 @@
 @import '../../../../styles/vars';
 
 
-.employeeStats :global {
-    margin-top: 30px;
-}
-
-.employeeStatsTitle :global {
+.employee_stats_title :global {
     font-size: 17px;
     color: $color-white;
     font-weight: 500;

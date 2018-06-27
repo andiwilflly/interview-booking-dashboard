@@ -8,10 +8,10 @@ class BookingPage extends React.Component {
 
     render() {
         return (
-            <div>
+            <React.Fragment>
                 <BookingDashboard />
                 <EmployeeStats />
-            </div>
+            </React.Fragment>
         );
     }
 }

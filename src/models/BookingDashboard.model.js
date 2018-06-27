@@ -10,10 +10,13 @@ const BookingDashboard = {
     checkedIn: types.maybe(types.number)
 };
 
+
 const actions = (self)=> {
+
     return {
 
         fetch: async ()=> {
+            if(self.status === "fulfilled") return; // Cache
             let response = await window.fetch(`${env.API_URL}/booking-snapshot`);
             response = await response.json();
             self.create(response);

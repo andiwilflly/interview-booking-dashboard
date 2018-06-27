@@ -17,7 +17,7 @@ class EmployeeStatsList extends React.Component {
 
     render() {
         return (
-            <ul className={ styles.employeeStatsList }>
+            <ul className={ styles.employee_stats_list }>
                 { this.props.employeeList.map((employee)=> {
                     return <EmployeeStatsItem employee={ employee } key={employee.lastName}/>
                 })}

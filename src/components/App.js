@@ -8,9 +8,7 @@ export default class App extends React.Component {
     render() {
         return (
             <div className={styles.app}>
-                <div className="page-content">
-                    <Router />
-                </div>
+                 <Router />
             </div>
         );
     }

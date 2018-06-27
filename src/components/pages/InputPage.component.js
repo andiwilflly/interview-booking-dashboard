@@ -8,6 +8,8 @@ class InputPage extends React.Component {
 
     inputValue = observable.box("");
 
+    inputRef = React.createRef();
+
     prefix = "+1";
 
     symbolsLimit = 10;
@@ -52,7 +54,7 @@ class InputPage extends React.Component {
         if(this.clearInputValue.length > 3 ) return;
 
         const countryCodeSpacesLength = this.clearInputValue.length + 1;
-        this.inputRef.setSelectionRange(countryCodeSpacesLength, countryCodeSpacesLength);
+        this.inputRef.current.setSelectionRange(countryCodeSpacesLength, countryCodeSpacesLength);
     };
 
 
@@ -61,7 +63,7 @@ class InputPage extends React.Component {
             <div>
                 <input type="text"
                        placeholder="Enter phone number"
-                       ref={ (node)=> this.inputRef = node }
+                       ref={ this.inputRef }
                        onChange={ this.onInputChange }
                        onKeyUp={ this.onKeyUp }
                        value={ this.validate(this.inputValue.get()) } />

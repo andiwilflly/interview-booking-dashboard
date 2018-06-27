@@ -9,7 +9,6 @@ import styles from "./EmployeeStatsProgress.module.scss";
 
 class EmployeeStatsProgress extends React.Component {
 
-
     static propTypes = {
         bookingHours: PropTypes.number.isRequired
     };
@@ -20,9 +19,8 @@ class EmployeeStatsProgress extends React.Component {
 
     render() {
         return (
-            <div className={ styles.employeeStatsProgress }>
-                <div style={{ width: this.progressWidth }}
-                     className={ styles.employeeStatsProgressInner } />
+            <div className={ styles.employee_stats_progress }>
+                <div style={{ width: this.progressWidth }} className={ styles.employee_stats_progress_inner } />
             </div>
         );
     }

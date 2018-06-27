@@ -9,7 +9,7 @@ import styles from "./BookingDashboard.module.scss";
 class BookingDashboard extends React.Component {
 
     componentDidMount() {
-        store.bookingDashboard.fetch();
+       store.bookingDashboard.fetch();
     }
 
 
@@ -17,19 +17,19 @@ class BookingDashboard extends React.Component {
 
 
     render() {
-        if(store.bookingDashboard.status !== "fulfilled") return <div>Loading dashboard...</div>;
+        if(store.bookingDashboard.status !== "fulfilled") return <ul className={ styles.booking_dashboard }>Loading dashboard...</ul>;
         return (
-            <ul className={ styles.bookingDashboard }>
-                <li className={ styles.bookingDashboardItem }>
-                    <p className={ styles.bookingDashboardItemNumber }>{ this.bookingDashboard.availableRooms }</p>
+            <ul className={ styles.booking_dashboard }>
+                <li className={ styles.booking_dashboard_item }>
+                    <p className={ styles.booking_dashboard_item_number }>{ this.bookingDashboard.availableRooms }</p>
                     <p>Rooms available</p>
                 </li>
-                <li className={ styles.bookingDashboardItem }>
-                    <p className={ styles.bookingDashboardItemNumber }>{ this.bookingDashboard.reservedRooms }</p>
+                <li className={ styles.booking_dashboard_item }>
+                    <p className={ styles.booking_dashboard_item_number }>{ this.bookingDashboard.reservedRooms }</p>
                     <p>Reserved rooms</p>
                 </li>
-                <li className={ styles.bookingDashboardItem }>
-                    <p className={ styles.bookingDashboardItemNumber }>{ this.bookingDashboard.checkedIn }</p>
+                <li className={ styles.booking_dashboard_item }>
+                    <p className={ styles.booking_dashboard_item_number }>{ this.bookingDashboard.checkedIn }</p>
                     <p>Checked in</p>
                 </li>
             </ul>

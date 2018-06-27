@@ -1,6 +1,6 @@
 @import '../../../../styles/vars';
 
-.employeeStatsItem :global {
+.employee_stats_item :global {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -9,7 +9,7 @@
 }
 
 
-.employeeStatsItemImageWrapper :global {
+.employee_stats_item_image_wrapper :global {
     width: $employee-stats-item-height;
     height: $employee-stats-item-height;
     border-radius: 50%;
@@ -22,7 +22,7 @@
 }
 
 
-.employeeStatsItemInfo :global {
+.employee_stats_item_info :global {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -31,11 +31,11 @@
 }
 
 
-.employeeStatsItemInfoName :global {
+.employee_stats_item_info_name :global {
     color: $color-white;
-    line-height: 18px;
+    line-height: $employee-stats-item-info-line-height;
 }
 
-.employeeStatsItemInfoHours :global {
-    line-height: 18px;
+.employee_stats_item_info_hours :global {
+    line-height: $employee-stats-item-info-line-height;
 }

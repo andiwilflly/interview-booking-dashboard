@@ -14,9 +14,11 @@ const Bookings = {
 
 
 const actions = (self)=> {
+
     return {
 
         fetchBookings: async ()=> {
+            if(self.status === "fulfilled") return; // Cache
             let response = await window.fetch(`${env.API_URL}/bookings`);
             response = await response.json();
             runInAction(`BOOKINGS-FETCH-SUCCESS`, ()=> {
