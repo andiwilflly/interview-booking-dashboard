@@ -29,7 +29,7 @@ class InputPage extends React.Component {
         const newValue = this.removeNonNumbers(e.target.value);
 
         if(!newValue) return this.inputValue.set("");
-        if(newValue === this.clearInputValue) return this.inputValue.set(this.prefix + newValue.substring(0, newValue.length-1));
+        if(/^\([0-9\s]{1,3}\)$/.test(e.target.value)) return this.inputValue.set(this.prefix + newValue.substring(0, newValue.length));
         this.inputValue.set(this.prefix + newValue);
     };
 
@@ -54,6 +54,7 @@ class InputPage extends React.Component {
         if(this.clearInputValue.length > 3 ) return;
 
         const countryCodeSpacesLength = this.clearInputValue.length + 1;
+
         this.inputRef.current.setSelectionRange(countryCodeSpacesLength, countryCodeSpacesLength);
     };
 
