@@ -5,9 +5,9 @@
     background: $color-big-stone;
     height: 3px;
     margin-top: 3px;
-}
 
-.employee_stats_progress_inner :global {
-    background: $color-algae-green;
-    height: 100%;
+    .inner {
+        background: $color-algae-green;
+        height: 100%;
+    }
 }

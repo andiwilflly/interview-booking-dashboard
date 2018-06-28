@@ -7,8 +7,10 @@ import Router from "components/Router";
 export default class App extends React.Component {
     render() {
         return (
-            <div className={styles.app}>
-                 <Router />
+            <div className={ `container ${styles.app}` }>
+                <div className="col-sm-12">
+                    <Router />
+                </div>
             </div>
         );
     }

@@ -20,7 +20,7 @@ class EmployeeStatsItem extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="row">
                 <h3 className={ styles.employee_stats_title }>{ store.employee.status === 'fulfilled' ? "Employee stats" : "Loading..." }</h3>
                 { store.employee.status === 'fulfilled' ?
                     <EmployeeStatsList employeeList={ this.employeeList } />

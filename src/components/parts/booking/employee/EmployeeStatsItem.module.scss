@@ -1,41 +1,34 @@
 @import '../../../../styles/vars';
 
 .employee_stats_item :global {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
     height: $employee-stats-item-height;
     margin: $employee-stats-item-margin;
-}
 
+    .image_wrapper {
+        width: $employee-stats-item-height;
+        height: $employee-stats-item-height;
+        border-radius: 50%;
+        overflow: hidden;
 
-.employee_stats_item_image_wrapper :global {
-    width: $employee-stats-item-height;
-    height: $employee-stats-item-height;
-    border-radius: 50%;
-    overflow: hidden;
-
-    img {
-        width: 100%;
-        height: auto;
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
-}
 
+    .info {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
 
-.employee_stats_item_info :global {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    width: $employee-stats-item-info-with;
-}
+        .info_name {
+            color: $color-white;
+            line-height: $employee-stats-item-info-line-height;
+        }
 
-
-.employee_stats_item_info_name :global {
-    color: $color-white;
-    line-height: $employee-stats-item-info-line-height;
-}
-
-.employee_stats_item_info_hours :global {
-    line-height: $employee-stats-item-info-line-height;
+        .info_hours {
+            line-height: $employee-stats-item-info-line-height;
+        }
+    }
 }

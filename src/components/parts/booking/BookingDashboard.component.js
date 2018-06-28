@@ -19,17 +19,17 @@ class BookingDashboard extends React.Component {
     render() {
         if(store.bookingDashboard.status !== "fulfilled") return <ul className={ styles.booking_dashboard }>Loading dashboard...</ul>;
         return (
-            <ul className={ styles.booking_dashboard }>
-                <li className={ styles.booking_dashboard_item }>
-                    <p className={ styles.booking_dashboard_item_number }>{ this.bookingDashboard.availableRooms }</p>
+            <ul className={ `row ${styles.booking_dashboard}` }>
+                <li className="col-sm-4">
+                    <p className="item_number">{ this.bookingDashboard.availableRooms }</p>
                     <p>Rooms available</p>
                 </li>
-                <li className={ styles.booking_dashboard_item }>
-                    <p className={ styles.booking_dashboard_item_number }>{ this.bookingDashboard.reservedRooms }</p>
+                <li className="col-sm-4">
+                    <p className="item_number">{ this.bookingDashboard.reservedRooms }</p>
                     <p>Reserved rooms</p>
                 </li>
-                <li className={ styles.booking_dashboard_item }>
-                    <p className={ styles.booking_dashboard_item_number }>{ this.bookingDashboard.checkedIn }</p>
+                <li className="col-sm-4">
+                    <p className="item_number">{ this.bookingDashboard.checkedIn }</p>
                     <p>Checked in</p>
                 </li>
             </ul>

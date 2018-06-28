@@ -20,7 +20,7 @@ class EmployeeStatsProgress extends React.Component {
     render() {
         return (
             <div className={ styles.employee_stats_progress }>
-                <div style={{ width: this.progressWidth }} className={ styles.employee_stats_progress_inner } />
+                <div style={{ width: this.progressWidth }} className="inner" />
             </div>
         );
     }

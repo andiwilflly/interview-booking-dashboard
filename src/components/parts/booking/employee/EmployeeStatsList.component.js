@@ -2,10 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 // MobX
 import { observer } from "mobx-react";
-// Styles
-import styles from "./EmployeeStatsList.module.scss";
 // Components
-import EmployeeStatsItem from "components/parts/booking/employee/EmployeeStatsItem.component"
+import EmployeeStatsItem from "components/parts/booking/employee/EmployeeStatsItem.component";
 
 
 class EmployeeStatsList extends React.Component {
@@ -17,7 +15,7 @@ class EmployeeStatsList extends React.Component {
 
     render() {
         return (
-            <ul className={ styles.employee_stats_list }>
+            <ul className="col-xs-8">
                 { this.props.employeeList.map((employee)=> {
                     return <EmployeeStatsItem employee={ employee } key={employee.lastName}/>
                 })}

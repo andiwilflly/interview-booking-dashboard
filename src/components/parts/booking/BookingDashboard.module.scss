@@ -1,21 +1,13 @@
 @import '../../../styles/vars';
 
 .booking_dashboard :global {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
     padding-bottom: 31px;
     border-bottom: 1px solid $color-arsenic;
     margin-bottom: 65px;
-}
 
-.booking_dashboard_item :global {
-    width: $booking-dashboard-item-width;
-    padding-left: 5px;
-}
-
-.booking_dashboard_item_number :global {
-    font-size: 24px;
-    color: $color-white;
-    height: 29px;
+    .item_number {
+        font-size: 24px;
+        color: $color-white;
+        height: 29px;
+    }
 }

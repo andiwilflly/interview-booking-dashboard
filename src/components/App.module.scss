@@ -1,6 +1,5 @@
 @import '../styles/vars';
 
 .app :global {
-    width: $layout-with;
-    margin: $layout-margin;
+    margin-top: $layout-margin-top;
 }
