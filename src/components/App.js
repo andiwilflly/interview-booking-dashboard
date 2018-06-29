@@ -8,10 +8,8 @@ export default class App extends React.Component {
     render() {
         return (
             <div className={ `container ${styles.app}` }>
-                <div className="row">
-                    <div className="col-xs-12">
-                        <Router />
-                    </div>
+                <div className="col-xs-12">
+                    <Router />
                 </div>
             </div>
         );
