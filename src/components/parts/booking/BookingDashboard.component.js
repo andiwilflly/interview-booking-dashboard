@@ -20,15 +20,15 @@ class BookingDashboard extends React.Component {
         if(store.bookingDashboard.status !== "fulfilled") return <ul className={ styles.booking_dashboard }>Loading dashboard...</ul>;
         return (
             <ul className={ `row ${styles.booking_dashboard}` }>
-                <li className="col-sm-4">
+                <li className="col-xs-4">
                     <p className="item_number">{ this.bookingDashboard.availableRooms }</p>
                     <p>Rooms available</p>
                 </li>
-                <li className="col-sm-4">
+                <li className="col-xs-4">
                     <p className="item_number">{ this.bookingDashboard.reservedRooms }</p>
                     <p>Reserved rooms</p>
                 </li>
-                <li className="col-sm-4">
+                <li className="col-xs-4">
                     <p className="item_number">{ this.bookingDashboard.checkedIn }</p>
                     <p>Checked in</p>
                 </li>

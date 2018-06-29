@@ -25,9 +25,9 @@ const lazy = (loadLazyComponent)=> {
 				const { LazyComponent } = this.state;
 
 				return (
-					<div>
+					<React.Fragment>
 						{ LazyComponent ? <LazyComponent { ...this.props } /> : null }
-					</div>
+					</React.Fragment>
 				)
 			}
 		};

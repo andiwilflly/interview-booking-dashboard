@@ -15,11 +15,11 @@ class EmployeeStatsList extends React.Component {
 
     render() {
         return (
-            <ul className="col-xs-8">
+            <div className="col-xs-8">
                 { this.props.employeeList.map((employee)=> {
                     return <EmployeeStatsItem employee={ employee } key={employee.lastName}/>
                 })}
-            </ul>
+            </div>
         );
     }
 }

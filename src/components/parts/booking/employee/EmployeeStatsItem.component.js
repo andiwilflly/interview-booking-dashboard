@@ -17,7 +17,7 @@ class EmployeeStatsItem extends React.Component {
 
     render() {
         return (
-            <li className={ styles.employee_stats_item }>
+            <div className={ `row ${styles.employee_stats_item}` }>
                 <div className="col-xs-2">
                     <div className="image_wrapper">
                         <img src={ this.props.employee.profileImageUrl }
@@ -31,7 +31,7 @@ class EmployeeStatsItem extends React.Component {
 
                     <EmployeeStatsProgress bookingHours={ this.props.employee.bookingHours } />
                 </div>
-            </li>
+            </div>
         );
     }
 }
